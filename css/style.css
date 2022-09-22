@@ -202,12 +202,11 @@ span.enviar_mail {
     font-weight: 400;
     text-transform: none;
     margin-top: 0.5rem;
-    padding: 0.3rem;
+    padding: 0.1rem;
     text-align: center;
-    background-color: rgb(103, 131, 103);
+    background-color: rgb(76, 122, 103);
     color: var(--blanco);
-    width: 30%;
-    min-width: fit-content;
+    width: fit-content;
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
