@@ -19,14 +19,10 @@
 html {
     min-height: 100%;
     font-family: var(--fuente);
+    height: 100vh;
 }
 h1,h2,h3{
     text-align: center;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    padding-bottom: 0.5rem;
-    color: var(--negro);
-    font-weight: bold;
 }
 h1 {
     text-transform: uppercase;
@@ -255,4 +251,14 @@ th, td {
     width: 70%;
     margin-right: auto;
     margin-left: auto;
+}
+/*--------footer-----------*/
+.footer {
+    text-align: center;
+    background-color: var(--negro-bg);
+    color: var(--gris-claro);
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    font-size: 0.6rem;
+    margin-top: 10rem;
 }
