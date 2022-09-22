@@ -85,7 +85,7 @@ h1 {
     background-color: white;
     margin-left: 5%;
     margin-right: 5%;
-    padding: 10px;
+    padding: 1rem;
     border-color: whitesmoke;
     box-shadow: 26px 28px 15px -8px rgba(0,0,0,0.15);
     border-radius: 0.7rem;
@@ -115,6 +115,7 @@ button:active {
     width: min(60%,100%);/*utiliza el valor más chico*/
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 5rem;
     padding: 2rem;
     border-radius: 1rem;
 }
