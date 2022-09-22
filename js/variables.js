@@ -9,10 +9,10 @@ const mail = document.querySelector("#mail")
 const recuadro = document.querySelector("#recuadro_presupuesto")
 
 //BASE DE DATOS FICTICIA 
-const datosServicios = [{tipo: 'Reparación', factor: 600},
-                        {tipo: 'Mantenimiento', factor: 200},
-                        {tipo: 'Puesta en marcha', factor: 300},
-                        {tipo: 'Instalación', factor: 500},]
+const datosServicios = [{tipo: 'Reparación', factor: 800},
+                        {tipo: 'Mantenimiento', factor: 300},
+                        {tipo: 'Puesta en marcha', factor: 400},
+                        {tipo: 'Instalación', factor: 600},]
                         // {tipo: 'Oficina', factor: 2.39},
                         // {tipo: 'Local Comercial', factor: 1.41},
                         // {tipo: 'Depósito Logística', factor: 1.92}]
@@ -26,4 +26,4 @@ const datosNecesidad = [{tipo: 'Ordinario', factor: 0},
                         {tipo: 'Urgente', factor: 100},]
 
 
-const CostoBase = 72.50
+const CostoBase = 72.60

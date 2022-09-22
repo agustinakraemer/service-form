@@ -178,7 +178,7 @@ button:active {
     text-align: center;
     background-color: var(--rosa);
     color: var(--blanco);
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     margin-top: 3rem;
     text-transform: uppercase;
@@ -187,18 +187,31 @@ button:active {
     border: none;
     width: 100%;
     font-size: 1rem;
-    cursor: pointer;
+    
 }
 .recuadro p {
     font-size: 1.5rem;
 }
-span {
+span.ppto {
     font-size: 1.6rem;
 }
-span .enviar_mail {
-    font-size: 3rem;
+span.enviar_mail {
+    font-size: 0.8rem;
+}
+.cuadro_enviar_mail {
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+    text-align: center;
+    background-color: rgb(103, 131, 103);
+    color: var(--blanco);
+    width: 30%;
+    min-width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
     cursor: pointer;
-    padding-left: 1rem;
+    border-radius: 5px;
 }
 .foco-en-input {
     border-color: var(--rosa)!important;
