@@ -27,3 +27,28 @@ const datosNecesidad = [{tipo: 'Ordinario', factor: 0},
 
 
 const CostoBase = 72.60
+
+const alerta = (mensaje, icono)=> {
+    if (icono == "warning") {
+        Swal.fire({ 
+            title: mensaje,
+            icon: icono,
+            backdrop: true,
+            iconColor:'rgb(189, 0, 0)',
+            confirmButtonColor:'#253759',
+            confirmButtonText: 'Aceptar',
+            background: 'rgb(212, 212, 212)'
+        });
+    } else {
+        Swal.fire({ 
+            title: mensaje,
+            icon: icono,
+            backdrop: true,
+            iconColor:'green',
+            confirmButtonColor:'#253759',
+            confirmButtonText: 'Aceptar',
+            background: 'rgb(212, 212, 212)'
+        });
+    }
+    
+}

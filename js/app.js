@@ -20,15 +20,16 @@ const datosCompletos = ()=> {
     }
 }
 
+const cotizamos = ()=> {
+    const ppto = new Cotizador(servicio.value, ubicacion.value, necesidad.value, CostoBase)
+        importe.innerText = ppto.cotizar()
+        btnEnviar.classList.remove("ocultar")
+        recuadro.classList.remove("ocultar")
+}
+
+
 const realizarCotizacion = ()=> {
-    if (datosCompletos()) {//realizar la cotización
-        const seguro = new Cotizador(servicio.value, ubicacion.value, necesidad.value, CostoBase)
-              importe.innerText = seguro.cotizar()
-              btnEnviar.classList.remove("ocultar")
-              recuadro.classList.remove("ocultar")
-    } else {
-        alert("⛔️ Completa todos los campos.")
-    }
+    datosCompletos() ? cotizamos() : alerta("Completa todos los campos.","warning")
 }
 
 const enviarPorEmail = ()=> {
@@ -37,10 +38,9 @@ const enviarPorEmail = ()=> {
         servicio: servicio[servicio.selectedIndex].text,
         ubicacion: ubicacion[ubicacion.selectedIndex].text,
         necesidad: necesidad.value,
-        poliza: importe.innerText
     }
     localStorage.setItem("UltimaCotizacion", JSON.stringify(cotizacion))
-    alert("✅ Presupuesto enviado a su casilla de correo.")
+    alerta("Presupuesto enviado a su casilla de correo.", "success")
     btnEnviar.classList.add("ocultar")
     recuadro.classList.add("ocultar")
 }

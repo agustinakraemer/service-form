@@ -15,7 +15,9 @@
     --gris: rgb(212, 212, 212);
     --fuente: 'Poppins', sans-serif;
 }
-
+.primario {
+    color: rgb(189, 0, 0);
+}
 html {
     min-height: 100%;
     font-family: var(--fuente);
