@@ -12,6 +12,7 @@ cargarCombo(servicio, datosServicios)
 cargarCombo(ubicacion, datosUbicacion)
 cargarCombo(necesidad, datosNecesidad)
 
+
 const datosCompletos = ()=> {
     if (servicio.value !== "..." && ubicacion.value !== "..." && necesidad.value !== "..." && mail.value !== "") {
         return true
@@ -19,12 +20,17 @@ const datosCompletos = ()=> {
         return false
     }
 }
+const loading = ()=> `<span class="loader"></span>`
 
 const cotizamos = ()=> {
-    const ppto = new Cotizador(servicio.value, ubicacion.value, necesidad.value, CostoBase)
-        importe.innerText = ppto.cotizar()
-        btnEnviar.classList.remove("ocultar")
-        recuadro.classList.remove("ocultar")
+    btnCotizar.innerHTML = loading()
+        setTimeout(() => {
+            const ppto = new Cotizador(servicio.value, ubicacion.value, necesidad.value, CostoBase)
+                importe.innerText = ppto.cotizar()
+                btnEnviar.classList.remove("ocultar")
+                recuadro.classList.remove("ocultar")
+                form_before.classList.add("ocultar")
+        }, 2000);
 }
 
 
@@ -33,16 +39,18 @@ const realizarCotizacion = ()=> {
 }
 
 const enviarPorEmail = ()=> {
-    const cotizacion = {
-        fechaCotizacion: new Date().toLocaleString(),
-        servicio: servicio[servicio.selectedIndex].text,
-        ubicacion: ubicacion[ubicacion.selectedIndex].text,
-        necesidad: necesidad.value,
-    }
-    localStorage.setItem("UltimaCotizacion", JSON.stringify(cotizacion))
-    alerta("Presupuesto enviado a su casilla de correo.", "success")
-    btnEnviar.classList.add("ocultar")
-    recuadro.classList.add("ocultar")
+    btnEnviar.innerHTML = loading()
+    setTimeout(() => {
+        const cotizacion = {
+            fechaCotizacion: new Date().toLocaleString(),
+            servicio: servicio[servicio.selectedIndex].text,
+            ubicacion: ubicacion[ubicacion.selectedIndex].text,
+            necesidad: necesidad.value,
+        }
+        localStorage.setItem("UltimaCotizacion", JSON.stringify(cotizacion))
+        alerta("Presupuesto enviado a su casilla de correo.", "success")
+    }, 2000);
+    
 }
 
 btnCotizar.addEventListener("click", realizarCotizacion)

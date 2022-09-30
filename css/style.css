@@ -23,15 +23,21 @@ html {
     font-family: var(--fuente);
     height: 100vh;
 }
+body {
+    height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
 h1,h2,h3{
     text-align: center;
 }
 h1 {
     text-transform: uppercase;
-    font-size: 1.6rem;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    color: var(--negro);
+    font-size: 1.8rem;
+    padding-top: 3rem;
+    padding-bottom: 0.6rem;
+    color: var(--primario);
     font-weight: bold;
 }
 .body-bg {
@@ -51,6 +57,7 @@ h1 {
     padding-right: 20%;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 100%;
 }
 .bg-color {
     background-color: var(--primario); /* Fondo navbar */
@@ -172,6 +179,7 @@ button:active {
     width: 100%;
     font-size: 1.3rem;
     cursor: pointer;
+    
 }
 #btnAgregar:hover {
     background-color: var(--secundario);
@@ -182,7 +190,10 @@ button:active {
     color: var(--blanco);
     padding: 0.5rem 1rem;
     text-decoration: none;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
@@ -195,24 +206,33 @@ button:active {
     font-size: 1.5rem;
 }
 span.ppto {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 span.enviar_mail {
     font-size: 0.8rem;
 }
 .cuadro_enviar_mail {
-    font-weight: 400;
+    font-weight: bold;
+    color: var(--gris-claro);
+    font-size: 1.2rem;
     text-transform: none;
-    margin-top: 0.5rem;
-    padding: 0.1rem;
+    margin-top: 1rem;
+    padding: 0.2rem 0.5rem;
     text-align: center;
-    background-color: rgb(76, 122, 103);
+    background-color: rgb(76, 122, 95);
     color: var(--blanco);
     width: fit-content;
+    min-width: 9rem;
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 8px 7px 4px -4px rgba(0,0,0,0.75);
+}
+.cuadro_enviar_mail:hover {
+    background-color: rgb(91, 152, 116);
 }
 .foco-en-input {
     border-color: var(--rosa)!important;
@@ -221,6 +241,28 @@ span.enviar_mail {
     border: none;
     padding: 0.9rem;
     border-radius: 0.5rem;
+}
+
+/*----Contacto------*/
+#form_contacto {
+    background-color: var(--negro-bg);
+    width: min(60%,100%);/*utiliza el valor más chico*/
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+#form_contacto fieldset{
+    border: none;
+}
+#form_contacto legend {
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--tercero);
 }
 /*--------Tabla Productos----------*/
 .tabla_productos {
@@ -275,4 +317,50 @@ th, td {
     padding-bottom: 2.5rem;
     font-size: 0.6rem;
     margin-top: 10rem;
+    width: 100%;
+    bottom: 0%;
 }
+/*---- Loading Icon CSS------*/
+.loader {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    margin:7px auto;
+    padding: 0.3rem;
+    position: relative;
+    color: #FFF;
+    left: -100px;
+    box-sizing: border-box;
+    animation: shadowRolling 2s linear infinite;
+  }
+  
+  @keyframes shadowRolling {
+    0% {
+      box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    12% {
+      box-shadow: 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    25% {
+      box-shadow: 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+    36% {
+      box-shadow: 120px 0 white, 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+      box-shadow: 130px 0 white, 120px 0 white, 110px 0 white, 100px 0 white;
+    }
+    62% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white, 110px 0 white;
+    }
+    75% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white;
+    }
+    87% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white;
+    }
+    100% {
+      box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+    }
+  }
