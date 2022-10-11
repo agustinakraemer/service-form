@@ -1,0 +1,52 @@
+[
+    {
+      "datosServicios": [
+            {
+            "tipo": "Reparación", 
+            "factor": 800
+            },
+            {
+            "tipo": "Mantenimiento", 
+            "factor": 300
+            },
+            {
+            "tipo": "Puesta en marcha", 
+            "factor": 400
+            },
+            {
+            "tipo": "Instalación", 
+            "factor": 600
+            }
+        ],
+      "datosUbicacion": [
+            {
+            "tipo": "Palma", 
+            "factor": 0
+            },
+            {
+            "tipo": "Arenal, Marratxi, Magaluf", 
+            "factor": 20
+            },
+            {
+            "tipo": "Algaida, Llucmajor, Sencelles, Binissalem, Bunyola", 
+            "factor": 50
+            },
+            {
+            "tipo": "Arta, Alcudia, Pollensa, Soller", 
+            "factor": 70
+            }
+        ],
+      "datosNecesidad": [
+            {
+            "tipo": "Ordinario", 
+            "factor": 0
+            },
+        
+            {
+            "tipo": "Urgente", 
+            "factor": 100
+            }
+          ] 
+    }
+  
+  ]

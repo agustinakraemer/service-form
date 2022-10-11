@@ -6,7 +6,7 @@ class Cotizador {
         this.factorBase = parseFloat(factorBase)
     }
     cotizar() {
-        let resultado = (this.factorBase + this.factorSr + this.factorUb + this.factorNecesidad)
+        let resultado = ((this.factorBase + this.factorSr + this.factorUb + this.factorNecesidad)*1.21)
         return resultado.toFixed(2)
     }
 }

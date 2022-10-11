@@ -9,9 +9,15 @@ const btnEnviar = document.querySelector("span.guardar")
 const mail = document.querySelector("#mail")
 const recuadro = document.querySelector("#recuadro_presupuesto")
 const form_before = document.querySelector("#form_before")
+const contenidoHTML = ""
+let servicios = []
+const URL = "js/selector.json"
+const URLser = "js/datosServicios.json"
+const URLne = "js/datosNecesidad.json"
+const URLub = "js/datosUbicacion.json"
 
 //BASE DE DATOS FICTICIA 
-const datosServicios = [{tipo: 'Reparación', factor: 800},
+/* const datosServicios = [{tipo: 'Reparación', factor: 800},
                         {tipo: 'Mantenimiento', factor: 300},
                         {tipo: 'Puesta en marcha', factor: 400},
                         {tipo: 'Instalación', factor: 600},]
@@ -40,7 +46,7 @@ const datosZona = [{tipo: 'Palma', factor: 0},
                    {tipo: 'Inca', factor: 0},
                    {tipo: 'Calvia', factor: 0},
                    {tipo: 'Andraxt', factor: 0},
-                   {tipo: 'Esporles', factor: 0}]                        
+                   {tipo: 'Esporles', factor: 0}]        */                 
 
 const CostoBase = 72.60
 
