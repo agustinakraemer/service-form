@@ -12,9 +12,6 @@ const form_before = document.querySelector("#form_before")
 const contenidoHTML = ""
 let servicios = []
 const URL = "js/selector.json"
-const URLser = "js/datosServicios.json"
-const URLne = "js/datosNecesidad.json"
-const URLub = "js/datosUbicacion.json"
 
 //BASE DE DATOS FICTICIA 
 /* const datosServicios = [{tipo: 'Reparación', factor: 800},

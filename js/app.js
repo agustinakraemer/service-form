@@ -1,18 +1,3 @@
-/* const cargarCombo = async ()=> {
-    debugger
-    try {
-        const response = await fetch(URL) 
-        const selectJSON1 = await response[1].json()
-        servicios = selectJSON1
-        servicios.forEach(elemento => {
-                select.innerHTML += `<option value="${elemento.factor}">${elemento.tipo}</option>`
-            })
-    } catch (error) {
-        console.error("No existen elementos en el array.")
-    } finally {
-        
-    } 
-}  */
 //Función cargar Combos SELECT
  const cargarCombo = async (select, url)=> {
     try {
@@ -74,28 +59,3 @@ const enviarPorEmail = ()=> {
 
 btnCotizar.addEventListener("click", realizarCotizacion)
 btnEnviar.addEventListener("click", enviarPorEmail)
-
-/* const mostrarSelect = (contenido)=> {
-    const{tipo, factor} = contenido
-    return `<option value="${factor}">${tipo}</option>`
-}
-
-const cargarContenido = async (select, url)=> {
-    try {
-        const respuesta = await fetch(url) 
-        const respuestaData = await respuesta.json()
-            console.table(respuestaData)
-            select = respuestaData
-            servicios.forEach(contenido =>{
-                servicio.innerHTML = const{tipo, factor} = contenido
-                return `<option value="${factor}">${tipo}</option>`
-            })
-    } catch (error) {
-        
-    } finally {
-        servicio.innerHTML = mostrarSelect(elemento)
-    }
-}
-
-cargarContenido(servicio, URLservicio)
- */
